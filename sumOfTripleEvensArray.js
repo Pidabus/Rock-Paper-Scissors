@@ -1,6 +1,11 @@
-function sumOfTripledArray(array) {
-    return array
-        .filter(num => num % 2 === 0)  // Filters out odd numbers
-        .map(num => num * 3)  // increments all remaining elements in the array (even numbers) by +3
-        .reduce((acc, curr) => acc + curr) // acc -> accumulator, curr -> current element (first one). 
+function sumOfTripledEvens(arr) {
+    return arr
+        .filter(num => num % 2 == 0)     
+        .map(num => num * 3)
+        .reduce((total, num) => total + num)
 }
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const mappedArr = sumOfTripledEvens(array);
+
+console.log(mappedArr);

@@ -1,5 +1,7 @@
-const arr = [1, 2, 3, 4, 5];
+const playThe = () => console.log("music"); 
 
-let   mappedArr = arr.map(num => num + 1);
-  
-console.log(mappedArr);
+// playThe = function funkyFunction(funky) {
+//         return console.log(funky + " music")
+//     };
+
+playThe();

@@ -10,3 +10,12 @@ const watchThe = function (genre) {           // Anonymous function
 
 playThe("Rock");
 watchThe("Action");
+
+// <--------------------------------------------------------------------------------------------------------------------------------------------->
+
+const notes = ['do', 're', 'me'];
+
+notes.forEach((note) => console.log(note));  
+
+notes.forEach(console.log);
+

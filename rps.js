@@ -51,11 +51,12 @@ function playGame() {
         }
     }
 
+    // The logic that allows players to play 5 rounds.
+
     // for (let i = 0; i < 5; i++) {
     //     const humanSelection = getHumanChoice();
     //     const computerSelection = getComputerChoice();
-    //     playRound(humanSelection, computerSelection);
-    // }
+    //     playRound(humanSelection, computerSelection); }
 
     if (humanScore > computerScore) {
         console.log(`Congratulations! You won the match: ${humanScore} - ${computerScore}`);

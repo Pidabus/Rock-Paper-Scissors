@@ -25,3 +25,15 @@
 // };
 
 // console.log(arr.concat(arrayLike));
+
+// arr.forEach() -------------------------------------------------------------------------------------------------------------------------------------------->
+// Example 1:
+// ["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+//   console.log(`${item} is at index ${index} in ${array}`);
+// });
+
+// Example 2:
+// let arr = [1, 2, 3, 4, 5];  --> Even when the array is referenced to a variable, ${array} still outputs the whole array.
+// arr.forEach((item, index, array) => {
+//     console.log(`${item} is at position ${index} in ${array}`);
+// })

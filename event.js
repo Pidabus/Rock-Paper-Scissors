@@ -1,5 +1,10 @@
-const buttons = document.querySelectorAll("button");
+let btn = document.querySelector('#btn');
 
-buttons.forEach(button => {
-    button.addEventListener("click", e => console.log(e.target))
+btn.addEventListener('click', function(event) {
+    console.log('The button was clicked!');
+    // event.stopPropagation();
+});
+
+document.body.addEventListener('click',() => {
+    console.log('The body was clicked!');
 });

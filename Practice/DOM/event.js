@@ -1,23 +1,19 @@
-let btn = document.querySelector('#btn');
+let btnKeys = document.querySelector('#btnKeys');
 
-btn.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
+btnKeys.addEventListener('click', (e) => {
+    let keys = [];
+
+    if (e.shiftKey) keys.push('shift');
+    if (e.ctrlKey) keys.push('ctrl');
+    if (e.altKey) keys.push('alt');
+    if (e.metaKey) keys.push('meta');
+
+    let msg = document.querySelector('#messageKeys');
+    msg.textContent = `Keys: ${keys.join('+')}`;
 });
 
-btn.addEventListener("mouseup", (e) => { // "click" will always register as a left mouse button
-    let msg = document.querySelector("#message");
+// let textBox = document.getElementById('message');
+//         textBox.addEventListener('keydown', (event) => {
+//             console.log(`key=${event.key},code=${event.code}`);
 
-    switch (e.button) {
-        case 0:
-            msg.textContent = "Left mouse button clicked";
-            break;
-        case 1:
-            msg.textContent = "Middle mouse button clicked";
-            break;
-        case 2:
-            msg.textContent = "Right mouse button clicked";
-            break;
-        default:
-            msg.textContent = `Unknown mouse button: ${e.button}`;
-    }
-});
+//         });

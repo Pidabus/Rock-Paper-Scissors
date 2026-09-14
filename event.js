@@ -1,18 +1,14 @@
-function alertFunction() {
-    alert("YAY! YOU DID IT");
+const btn = document.querySelector("button");
+
+function random(number) {
+  return Math.floor(Math.random() * (number));
 }
 
-const btn = document.querySelector("#btn");
-
-// Method 1
-// btn.onclick = alertFunction();
-
-// Method 2
-// if (btn) { 
-//     btn.addEventListener("click", alertFunction); 
-// }
-
-// Method 3 (arrow function)
-if (btn) {
-    btn.addEventListener("click", () => alert("YAY! YOU DID IT"));
+function bgChange(e) {
+  const rndCol = `rgb(${random(256)}, ${random(256)}, ${random(256)})`;
+  e.target.style.backgroundColor = rndCol;
+  console.log(rndCol);
+  console.log(e);
 }
+
+btn.addEventListener("click", bgChange);

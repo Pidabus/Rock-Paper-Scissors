@@ -37,3 +37,33 @@
 // arr.forEach((item, index, array) => {
 //     console.log(`${item} is at position ${index} in ${array}`);
 // })
+
+// arr.sort() -------------------------------------------------------------------------------------------------------------------------------------------->
+// Example 1:
+// function compareNumeric(a, b) {
+//   if (a > b) return 1;
+//   if (a == b) return 0;
+//   if (a < b) return -1;
+// }
+
+// let arr = [ 1, 2, 15 ];
+
+// arr.sort(compareNumeric);
+
+// alert(arr);  // 1, 2, 15
+
+// arr.split() -------------------------------------------------------------------------------------------------------------------------------------------->
+// Example 1:
+let names = 'Bilbo, Gandalf, Nazgul';
+
+let arr = names.split(""); 
+
+// for (let name of arr) {
+//   console.log( `A message to ${name}.` ); // A message to Bilbo  (and other names)
+// }
+
+// arr = arr.join(""); --> This converts arr to a string from an array 
+
+// // for (let name of arr) {  --> That's why this still displays each letter by letter, because a string is an array of letters.
+// //   console.log( `A message to ${name}.` );
+// // }

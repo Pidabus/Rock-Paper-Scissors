@@ -36,11 +36,11 @@ function playGame() {
     });
 
     const results = document.querySelector("#results");
+    const score = document.querySelector("#score");
 
     function playRound(humanChoice, computerChoice) {
         // 1. Handle ties
         if (humanChoice === computerChoice) {
-            // console.log(`It's a tie! Both chose ${humanChoice}`);
             results.textContent = `It's a tie! Both chose ${humanChoice}`;
             return;
         }
@@ -51,24 +51,26 @@ function playGame() {
             (humanChoice === "paper" && computerChoice === "rock") ||
             (humanChoice === "scissors" && computerChoice === "paper")
         ) {
-            // console.log(`You win! ${humanChoice} beats ${computerChoice}`);
             results.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
             humanScore++;
         }
         // 3. All remaining valid cases are computer wins
         else {
-            // console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
             results.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
             computerScore++;
         }
-    }
 
-    if (humanScore > computerScore) {
-        console.log(`Congratulations! You won the match: ${humanScore} - ${computerScore}`);
-    } else if (computerScore > humanScore) {
-        console.log(`You lost the match: ${computerScore} - ${humanScore}`);
-    } else {
-        console.log(`The match ended in a tie: ${humanScore} - ${computerScore}`);
+        score.textContent = `Human | ${humanScore} - ${computerScore} | Computer`
+
+        if (humanScore == 5 || computerScore == 5) {
+            if (humanScore > computerScore) {
+                console.log(`Congratulations! You won the match: ${humanScore} - ${computerScore}`);
+            } else if (computerScore > humanScore) {
+                console.log(`You lost the match: ${computerScore} - ${humanScore}`);
+            } else {
+                console.log(`The match ended in a tie: ${humanScore} - ${computerScore}`);
+            }
+        }
     }
 }
 

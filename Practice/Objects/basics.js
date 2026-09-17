@@ -10,7 +10,7 @@ let user = {
     [fruit]: 6, // [fruit] is now saved as Orange in memory. Check console.log(user) to verify.
     0: "Zero",
 }
-console.log(user["Orange"]);
+// console.log(user["Orange"]);
 
 // All correct ways of getting the [fruit] property's value => 6
 // console.log(user["Orange"]);
@@ -25,10 +25,10 @@ console.log(user["Orange"]);
 // console.log("likes cats" in user);
 // console.log("0" in user);
 
-// for (let key in user) {
-//     // console.log(key);
-//     console.log(user[key]);
-// }
+for (let key in user) {
+    // console.log(key); 
+    // console.log(user[key]);
+}
 
 
 

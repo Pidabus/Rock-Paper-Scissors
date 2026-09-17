@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="signButton">Check star sign</button>
+    <pre id="log"></pre>
+
+
+    <script>const signButton = document.querySelector("#signButton");
+        const log = document.querySelector("#log");
+
+        signButton.addEventListener("click", () => {
+            let sign = prompt("What's your sign?", "Default");
+
+            if (sign === null) {
+                log.innerText = "OK, maybe next time.";
+            } else if (sign.toLowerCase() === "") {
+                log.innerText = "Don't be shy, enter your sign!";
+            } else if (sign.toLowerCase() === "scorpio") {
+                log.innerText = "Wow! I'm a Scorpio too!";
+            } else {
+                log.innerText = `${sign} is my favorite!`;
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -16,6 +16,6 @@ usersMapped = [
   { fullName: "Mary Key", id: 3 }
 ]
 */
-
-console.log( usersMapped[0].id ) // 1
+    
+console.log( usersMapped[0].idi )// cb
 console.log( usersMapped[0].fullName ) // John Smith

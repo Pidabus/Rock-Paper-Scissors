@@ -7,8 +7,8 @@ let users = [
 function groupById(arr) {
     let tempObj = {};
 
-    for (let key in arr) {
-        tempObj[arr[key].id] = arr[key];
+    for (let user of arr) {  
+        tempObj[user.id] = user;
     }
     
     return tempObj;

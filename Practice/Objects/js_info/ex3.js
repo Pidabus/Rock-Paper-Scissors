@@ -5,13 +5,14 @@ let mary = { name: "Mary", age: 28 };
 let arr = [ pete, john, mary ];
 
 function sortByAge(array) {
-    for (let i = 0;i < array.length - 1; i++) {
-        if(array[i].age > array[i+1].age) {  
-            let temp = array[i];
-            array[i] = array[i+1];
-            array[i+1] = temp;
-        }
-    }
+    // for (let i = 0;i < array.length - 1; i++) {
+    //     if(array[i].age > array[i+1].age) {  
+    //         let temp = array[i];
+    //         array[i] = array[i+1];
+    //         array[i+1] = temp;
+    //     }
+    // }
+    array.sort((a,b) => a.age - b.age);
 }
 
 sortByAge(arr);
